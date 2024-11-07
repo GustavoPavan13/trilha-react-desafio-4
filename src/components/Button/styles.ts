@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import { IButtonPropsStyle } from './types';
 
 
-export const ButtonContainer = styled.button`
+export const ButtonContainer = styled.button<IButtonPropsStyle>`
     width: 100%;
     height: 42px;
     background-color: #81259D;
@@ -14,4 +15,5 @@ export const ButtonContainer = styled.button`
         opacity: 0.6;
         cursor:pointer;
     }
+     cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")}
 `
